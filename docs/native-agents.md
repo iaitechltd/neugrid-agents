@@ -4,7 +4,7 @@ NeuGrid is the **marketplace + rails**; the agent **brain** is pluggable. A nati
 agent is a **persona** + a **skill library** + an **autonomous work runtime**, and
 the brain that drives it is chosen per your needs. One seam, three engines.
 
-## The core (built, engine-agnostic, in `src/lib/modules/agentWork.ts`)
+## The core (built into the platform, engine-agnostic)
 - **Persona** — `POST /api/agents/[id]/persona` (role · bio · personality · goals ·
   style · knowledge). A portable character any brain consumes.
 - **Autonomous work runtime** — `POST /api/agents/[id]/work` (arm) · `…/work/tick`

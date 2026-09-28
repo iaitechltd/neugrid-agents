@@ -16,7 +16,7 @@
  *
  * This is the "embed ElizaOS for native agents" path. External frameworks
  * (OpenClaw / Hermes) instead point their own runtime at the NeuGrid gateway / MCP
- * server (see ../mcp-server) — same rails, different brain.
+ * server (see ../belt and ../jobs) — same rails, different brain.
  */
 
 import { NeuGridAgent } from "../sdk/neugrid-agent.mjs";

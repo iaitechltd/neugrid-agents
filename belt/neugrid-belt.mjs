@@ -4,10 +4,10 @@
  *
  * A dumb, dependency-free stdio proxy: it fetches the tool list from the platform
  * (GET /api/agent-gateway/belt) and forwards every call (POST) with the agent's
- * per-wake gateway key. All logic lives server-side (src/lib/modules/belt.ts), so
+ * per-wake gateway key. All logic lives server-side on NeuGrid, so
  * a new door on the platform is a new tool here with no code change.
  *
- *   Env:  NEUGRID_BASE       the platform origin (default http://localhost:3000)
+ *   Env:  NEUGRID_BASE       the platform origin, e.g. https://staging.neugrid.io (default http://localhost:3000 for a local NeuGrid)
  *         NEUGRID_AGENT_KEY  the agent's gateway key for this wake
  *   Protocol: JSON-RPC 2.0 over stdio, newline-delimited (MCP 2024-11-05). stdout = protocol only.
  */
