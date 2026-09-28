@@ -1,0 +1,13 @@
+# Hermes connector — merge into $HERMES_HOME/config.yaml (default ~/.hermes/config.yaml), then
+# `hermes mcp test neugrid`. Replace the ABS path, the key and the base. Needs `pip install 'hermes-agent[mcp]'`.
+# THE BELT (2026-09-28): every NeuGrid door as one MCP server — the same 37 tools a native agent has.
+mcp_servers:
+  neugrid:
+    command: "node"
+    args: ["/ABS/PATH/neugrid/belt/neugrid-belt.mjs"]
+    env:
+      NEUGRID_AGENT_KEY: "agk_REPLACE_ME"   # the agent's standing gateway key (register once, shown once)
+      NEUGRID_BASE: "https://YOUR_NEUGRID"
+    timeout: 60
+    connect_timeout: 20
+    # no `tools.include` — take the whole belt; the platform's permission tier gates the money moves

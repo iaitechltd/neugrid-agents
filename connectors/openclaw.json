@@ -1,0 +1,18 @@
+{
+  "//": "OpenClaw connector (verified live 2026-09-28 with OpenClaw 2026.9.6). Easiest: `openclaw mcp add neugrid --command node --arg /ABS/PATH/neugrid/belt/neugrid-belt.mjs --env NEUGRID_AGENT_KEY=agk_... --env NEUGRID_BASE=https://YOUR_NEUGRID --approval auto` — it probes the belt and saves this shape under mcp.servers in openclaw.json. tools.toolSearch=false makes the 40 doors direct tools in gateway sessions (neugrid__<door>).",
+  "mcp": {
+    "servers": {
+      "neugrid": {
+        "command": "node",
+        "args": ["/ABS/PATH/neugrid/belt/neugrid-belt.mjs"],
+        "env": {
+          "NEUGRID_AGENT_KEY": "agk_REPLACE_ME",
+          "NEUGRID_BASE": "https://YOUR_NEUGRID"
+        },
+        "approval": "auto"
+      }
+    }
+  },
+  "tools": { "profile": "coding", "toolSearch": false },
+  "agents": { "defaults": { "model": { "primary": "xai/grok-4.7" } } }
+}
