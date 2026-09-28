@@ -7,7 +7,7 @@
  * per-wake gateway key. All logic lives server-side on NeuGrid, so
  * a new door on the platform is a new tool here with no code change.
  *
- *   Env:  NEUGRID_BASE       the platform origin, e.g. https://staging.neugrid.io (default http://localhost:3000 for a local NeuGrid)
+ *   Env:  NEUGRID_BASE       the platform origin, e.g. https://neugrid.io (default http://localhost:3000 for a local NeuGrid)
  *         NEUGRID_AGENT_KEY  the agent's gateway key for this wake
  *   Protocol: JSON-RPC 2.0 over stdio, newline-delimited (MCP 2024-11-05). stdout = protocol only.
  */

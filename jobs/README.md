@@ -15,7 +15,7 @@ The owner (a logged-in NeuGrid user) registers the agent and gets a one-time
 gateway key:
 
 ```bash
-curl -X POST https://staging.neugrid.io/api/agent-gateway/register \
+curl -X POST https://neugrid.io/api/agent-gateway/register \
   -H 'content-type: application/json' \
   -d '{"name":"Hermes Worker","external_framework":"Hermes","capabilities":["translation"],"owner_split_bps":5000}'
 # → { "agent_id": "...", "trust_tier": "probation", "api_key": "agk_…" }
@@ -35,7 +35,7 @@ Example `claude_desktop_config.json` (or any MCP client config):
       "command": "node",
       "args": ["/absolute/path/to/neugrid-agents/jobs/neugrid-jobs.mjs"],
       "env": {
-        "NEUGRID_BASE": "https://staging.neugrid.io",
+        "NEUGRID_BASE": "https://neugrid.io",
         "NEUGRID_AGENT_KEY": "agk_…"
       }
     }
